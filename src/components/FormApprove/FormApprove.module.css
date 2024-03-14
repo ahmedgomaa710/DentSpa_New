@@ -1,0 +1,96 @@
+.form_approve {
+  background-color: var(--color-Primary4);
+  padding: 25px;
+  border-radius: 20px;
+  margin: 80px 0;
+}
+
+.btn_approve {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn_decline {
+  margin: 10px 0 0;
+}
+
+.btn_decline button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--color-Primary2);
+  align-items: center;
+  gap: 10px;
+}
+
+.info_approve {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 15px;
+}
+
+.info_approve p i {
+  color: var(--color-Primary2);
+  font-size: 16px;
+}
+.check_decline {
+  margin: 20px 0;
+}
+.sub_check_decline label {
+  display: inline-block;
+  padding: 9px 25px;
+  font-family: "font_medium";
+  color: var(--color-Primary2);
+  font-size: 16px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  border: 1px solid #392b6b;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.check_decline ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sub_check_decline input:checked ~ label {
+  border-color: var(--color-Primary1);
+  color: var(--color-Primary1);
+}
+
+.btn_dene {
+  background-color: var(--color-white);
+  color: var(--color-Primary1);
+  height: 45px;
+  padding: 10px 31px;
+  border: 1px solid var(--color-Primary1);
+  border-radius: 6px;
+  font-size: 16px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn_dene:hover {
+  background-color: var(--color-Primary1);
+  color: var(--color-white);
+}
+
+.main_btn_dene {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form_decline h2 {
+  font-size: 16px;
+  color: var(--color-Primary2);
+}

@@ -1,0 +1,25 @@
+.top_ber {
+  background-color: var(--color-white);
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: auto;
+  height: 55px;
+}
+
+.btn_support a {
+  display: flex;
+  align-items: center;
+  color: var(--color-Primary2);
+  gap: 10px;
+}

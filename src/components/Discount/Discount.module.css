@@ -1,0 +1,22 @@
+.benner_discount {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  justify-content: center;
+  padding: 45px;
+
+  min-height: 150px;
+  box-shadow: 0 0 10px #30d9cb60;
+  border-radius: 20px;
+}
+.benner_discount h2 {
+  font-size: 35px;
+  line-height: 45px;
+  text-align: center;
+}
+.discount {
+  margin: 90px 0;
+}
+.benner_discount span {
+    color: var(--color-pr);
+}

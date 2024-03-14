@@ -1,0 +1,34 @@
+.hero {
+  background-color: var(--color-Primary3);
+  height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.img_hero {
+  height: 100%;
+  width: 42%;
+}
+.img_hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text_hero {
+  color: var(--color-Primary2);
+  padding: 35px;
+  width: calc(100% - 42%);
+}
+
+.text_hero h2 {
+  font-size: 58px;
+  line-height: 75px;
+  margin-bottom: 25px;
+  width: 90%;
+  height: 155px;
+}
+.text_hero p {
+    color: var(--color-Primary2);
+}
+

@@ -1,0 +1,40 @@
+.treatment {
+  margin: 70px 0;
+}
+
+.num_plan ul {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.num_plan ul li {
+  width: calc(100% / 16 - 10px);
+  text-align: center;
+  font-size: 14px;
+  text-align: center;
+}
+.images_treatment {
+  margin: 20px 0;
+}
+.images_treatment ul {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 15px;
+}
+
+.images_treatment ul li {
+  width: calc(100% / 16 - 10px);
+  text-align: center;
+  font-size: 14px;
+  text-align: center;
+}
+
+.images_treatment ul li img {
+  object-fit: contain;
+  width: auto;
+  height: 65px;
+}

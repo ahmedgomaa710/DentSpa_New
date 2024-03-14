@@ -1,0 +1,54 @@
+.title_visit {
+  color: var(--color-Primary1);
+  font-size: 20px;
+}
+
+.visit {
+  margin: 80px 0;
+}
+
+.visit tbody tr {
+  background: var(--color-Primary4);
+  padding: 20px;
+  border-top: 10px solid var(--color-white);
+  border-bottom: 10px solid var(--color-white);
+}
+.visit tbody tr th {
+  color: var(--color-Primary2);
+  font-size: 15px;
+}
+.visit thead tr th {
+  border-bottom: transparent;
+}
+
+.sub_tooltip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.total_visit ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: end;
+  width: 35%;
+  margin: 0 0 0 auto;
+}
+.total_visit ul li {
+  border-bottom: 1px solid #392b6b;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: "font_medium";
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  color: var(--color-Primary2);
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+.total_visit ul li span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
