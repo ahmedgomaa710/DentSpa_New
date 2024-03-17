@@ -9,14 +9,63 @@
   box-shadow: 0 0 10px #30d9cb60;
   border-radius: 20px;
 }
+
 .benner_discount h2 {
-  font-size: 35px;
+  font-size: 38px;
   line-height: 45px;
   text-align: center;
 }
+
 .discount {
   margin: 90px 0;
 }
-.benner_discount span {
-    color: var(--color-pr);
+
+.benner_discount h2 {
+  width: 90%;
+}
+
+.benner_discount h2 span {
+  color: var(--color-Primary1);
+}
+
+.main_discount {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.main_discount h2 {
+  font-size: 19px;
+  margin: auto;
+  width: 70%;
+}
+
+.main_discount ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.main_discount ul li button {
+  border: 1px solid #1fb0a456;
+  height: 55px;
+  font-size: 22px;
+  padding: 7px 35px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  color: var(--color-Primary1);
+  cursor: pointer;
+}
+
+.stripe {
+  text-align: center;
+
+}
+
+.stripe img {
+  width: 140px;
+  height: 30px;
+  object-fit: contain;
+
 }

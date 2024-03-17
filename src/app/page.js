@@ -7,6 +7,7 @@ import Visit1 from "@/components/Visit/Visit";
 import Visit2 from "@/components/Visit/Visit2";
 import FormApprove from "@/components/FormApprove/FormApprove";
 import Discount from "@/components/Discount/Discount";
+import Videos from "@/components/Videos/Videos";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Visit2 />
       <FormApprove />
       <Discount />
+      <Videos /> 
     </main>
   );
 }
