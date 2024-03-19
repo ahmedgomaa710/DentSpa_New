@@ -65,12 +65,11 @@ export default function Ask() {
           thumbs
           loop={true}
           pagination={{
-            el: ".swiper-pagination",
             clickable: true,
           }}
         >
           {videoIds.map((videoId, index) => (
-            <SwiperSlide key={videoId}>
+            <SwiperSlide key={index}>
               <div className={styles.sub_askvideo}>
                 <YouTube
                   videoId={videoId}

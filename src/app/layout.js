@@ -1,5 +1,6 @@
 
 
+import LangContextProvider from "@/Context/LangContext";
 import "./globals.css";
 import Layout from "@/components/_Layout/Layout";
 
@@ -10,5 +11,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <Layout layout_page={children} />;
+  return (
+    <LangContextProvider>
+      <Layout layout_page={children} />
+    </LangContextProvider>
+  );
 }

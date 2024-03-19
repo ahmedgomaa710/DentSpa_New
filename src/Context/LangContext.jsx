@@ -5,15 +5,18 @@ export const LangContext = createContext();
 export const LangContextSet = createContext();
 
 export default function LangContextProvider({ children }) {
-  const [lang, setLang] = useState("ar"); // en or ar
+  const [lang, setLang] = useState("en"); // en or ar
+  console.log(lang);
 
   useEffect(() => {
     const tokenLang = localStorage.getItem("lang");
 
-    if (tokenLang) {
+    if (tokenLang ) {
       if (tokenLang === "ar" || tokenLang === "en") {
         setLang(tokenLang);
       }
+    } else {
+     localStorage.setItem("lang","en");
     }
   }, []);
 

@@ -11,25 +11,28 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-function createData(name, calories, fat, carbs) {
-  return { name, calories, fat, carbs };
+function createData(id, name, calories, fat, carbs) {
+  return { id, name, calories, fat, carbs };
 }
 
 const rows = [
   createData(
+    "1",
     "Komposit Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
     "31/32/36/37",
     "$3500",
     "$1.5798"
   ),
   createData(
-    "Komposit Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
+    "2",
+    "Komposit1 Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
     "31/32/36/37",
     "$3500",
     "$1.5798"
   ),
   createData(
-    "Komposit Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
+    "3",
+    "Komposit2 Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
     "31/32/36/37",
     "$3500",
     "$1.5798"
@@ -60,7 +63,7 @@ export default function Visit1() {
           <TableBody>
             {rows.map((row) => (
               <TableRow
-                key={row.name}
+                key={row.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">

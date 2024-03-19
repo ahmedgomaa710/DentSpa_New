@@ -73,7 +73,7 @@ export default function Videos() {
           }}
         >
           {videoIds.map((videoId, index) => (
-            <SwiperSlide key={videoId}>
+            <SwiperSlide key={index}>
               <div className={styles.sub_video}>
                 <YouTube
                   videoId={videoId}
