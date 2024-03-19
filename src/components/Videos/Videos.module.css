@@ -1,8 +1,19 @@
 .videos {
-    margin: 50px 0;
+  margin: 50px 0;
 }
 
 .main_videos {
-    background-color: var(--color-Primary4);
-    padding: 35px ;
+  background-color: var(--color-Primary4);
+  padding: 35px;
+}
+
+.sub_video iframe {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gallary {
+  background-color: var(--color-Primary4);
+  padding: 35px;
 }

@@ -1,8 +1,7 @@
-import "./globals.css";
 
-// component layout
-import NavBer from "@/components/navBer/NavBer";
-import Hero from "@/components/hero/Hero";
+
+import "./globals.css";
+import Layout from "@/components/_Layout/Layout";
 
 export const metadata = {
   title: "DentSpa",
@@ -11,17 +10,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className="body">
-        <NavBer />
-        <Hero />
-        <div className="main-container">
-          <main className="app">
-            <div className="content_app">{children}</div>
-          </main>
-        </div>
-      </body>
-    </html>
-  );
+  return <Layout layout_page={children} />;
 }

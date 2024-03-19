@@ -8,10 +8,12 @@ import Visit2 from "@/components/Visit/Visit2";
 import FormApprove from "@/components/FormApprove/FormApprove";
 import Discount from "@/components/Discount/Discount";
 import Videos from "@/components/Videos/Videos";
+import Images from "@/components/Images_after/Images";
+import Package from "@/components/Package_Includes/Package";
 
 export default function Home() {
   return (
-    <main className="home">
+    <div className="home">
       <Information />
       <Medical />
       <Treatment />
@@ -20,6 +22,8 @@ export default function Home() {
       <FormApprove />
       <Discount />
       <Videos /> 
-    </main>
+      <Images />
+      <Package /> 
+    </div>
   );
 }

@@ -156,11 +156,11 @@ body {
 
 .app {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 .content_app {
-  width: 75%;
+  width: calc(75% - 25px);
 }
 
 .ctm-btn {
@@ -216,5 +216,5 @@ body {
   font-size: 15px;
   padding: 15px 20px;
   border: 1px solid #28282897;
-  font-family: 'font_main';
+  font-family: "font_main";
 }

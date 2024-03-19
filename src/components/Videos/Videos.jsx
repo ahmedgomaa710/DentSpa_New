@@ -1,13 +1,90 @@
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import YouTube from "react-youtube";
+import styles from "./Videos.module.css";
 import Title from "../Title/Title";
-import styles from "./Videos.module.css"
-export default function Videos() {
-    return (
-        <section className={styles.videos}>
-            <Title name="Patients had the same treatment that you are going to do" />
-            <div className={styles.main_videos}>
-                <iframe width="420" height="345" src="https://youtube.com/shorts/q8sg9Tj5kyk?si=YCm1f-06e1MxLjQh" frameborder="0" allow='autoplay' ></iframe>
-            </div>
-        </section>
-    )
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore  from "swiper";
+import { Pagination, A11y, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+SwiperCore.use([Pagination, A11y, Autoplay]);
+
+export default function Videos() {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const swiperRef = useRef(null);
+  const [autoplay, setAutoplay] = useState(true);
+
+  const opts = {
+    height: "360",
+    width: "640",
+    playerVars: {
+      autoplay: 0,
+      controls: 1,
+      rel: 1,
+      modestbranding: 1,
+      loop: 1,
+    },
+  };
+
+  const videoIds = ["q8sg9Tj5kyk", "q8sg9Tj5kyk", "q8sg9Tj5kyk"];
+
+  useEffect(() => {
+    if (autoplay) {
+      const interval = setInterval(() => {
+        playNextVideo();
+      }, 6000);
+
+
+      return () => clearInterval(interval);
+    }
+  }, [currentVideoIndex, autoplay]);
+
+  const onVideoEnd = () => {
+    setAutoplay(false);
+    playNextVideo();
+  };
+
+  const playNextVideo = () => {
+    const nextVideoIndex = (currentVideoIndex + 1) % videoIds.length;
+    setCurrentVideoIndex(nextVideoIndex);
+    swiperRef.current.swiper.slideTo(nextVideoIndex);
+    setAutoplay(true);
+  };
+
+  return (
+    <section className={styles.videos}>
+      <Title name="Patients had the same treatment that you are going to do" /> 
+      <div className={styles.main_videos}>
+        <Swiper
+          ref={swiperRef}
+          spaceBetween={10}
+          slidesPerView={4}
+          thumbs
+          
+          loop={true}
+          pagination={{
+            el: ".swiper-pagination",
+            clickable: true,
+            
+          }}
+        >
+          {videoIds.map((videoId, index) => (
+            <SwiperSlide key={videoId}>
+              <div className={styles.sub_video}>
+                <YouTube
+                  videoId={videoId}
+                  opts={opts}
+                  onEnd={index === currentVideoIndex ? onVideoEnd : null}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
 }

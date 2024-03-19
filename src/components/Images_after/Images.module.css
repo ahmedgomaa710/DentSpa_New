@@ -1,0 +1,16 @@
+.gallary {
+  background-color: var(--color-Primary4);
+  padding: 35px;
+  margin: 0 0px 50px;
+}
+.sub_gallary {
+  box-shadow: 0 0 5px #00000031;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.sub_gallary img {
+  width: 100%;
+  object-fit: cover;
+  height: 290px;
+}

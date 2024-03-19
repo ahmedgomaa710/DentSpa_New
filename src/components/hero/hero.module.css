@@ -25,10 +25,12 @@
   font-size: 58px;
   line-height: 75px;
   margin-bottom: 25px;
+  font-weight: 100;
   width: 90%;
   height: 155px;
 }
 .text_hero p {
     color: var(--color-Primary2);
 }
+
 

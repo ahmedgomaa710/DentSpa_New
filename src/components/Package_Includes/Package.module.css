@@ -1,0 +1,37 @@
+.package {
+  margin: 80px 0;
+}
+.sub_package {
+  text-align: center;
+  height: 100%;
+}
+.img_package {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  width: 65px;
+  background-color: #1fb0a411;
+  margin: 0px auto 15px;
+}
+.sub_package h2 {
+  color: var(--color-Primary2);
+  font-size: 17px;
+}
+
+.package {
+  margin-bottom: 50px;
+}
+
+.main_package {
+  margin: 50px 0;
+}
+
+.img_package img {
+  object-fit: contain;
+  max-width: 45px;
+  height: auto;
+  width: auto;
+  max-height: 45px;
+}
