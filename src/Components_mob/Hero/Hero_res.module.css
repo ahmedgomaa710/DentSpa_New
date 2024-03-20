@@ -1,0 +1,38 @@
+.header_res {
+  background-image: url(../../../public/images/header.png);
+  background-size: cover;
+  position: relative;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  z-index: 1;
+  padding: 25px 5%;
+  align-content: center;
+}
+.header_res::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color:#422E87;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+}
+.header_res h2 {
+  color: var(--color-white);
+  font-size: 45px;
+  line-height: 55px;
+  width: 65%;
+}
+.header_res h4 {
+  color: var(--color-white);
+  width: 100%;
+}
+
+.logo_res {
+  width: 100%;
+}

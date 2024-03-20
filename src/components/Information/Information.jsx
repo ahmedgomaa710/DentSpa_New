@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Information.module.css";
 import Title from "../Title/Title";
 import Image from "next/image";
@@ -16,9 +16,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
+import { LangContext } from "@/Context/LangContext";
+import useScreenWidth from "@/lib/customHooks/useScreenWidth";
 
 
 export default function Information() {
+  const langCtx = useContext(LangContext);
+  const screenWidth = useScreenWidth();
   return (
     <section className={styles.information}>
       <p>
@@ -93,19 +97,29 @@ export default function Information() {
         <Swiper
             modules={[ Pagination, A11y , Autoplay]}
             spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={
+              screenWidth >= 992 ? 4 :
+              screenWidth >= 768 ? 3 :
+              screenWidth >= 568 ? 2 :
+              1
+            }
+            key={"rays1"}
             thumbs
             autoplay={{
-              delay: 2000,
+              delay: 4000,
               disableOnInteraction: false,
             }}
             loop={true}
             pagination={{
-              el: ".swiper-pagination",
               clickable: true,
             }}
 
           >
+            <SwiperSlide>
+              <div className={styles.sub_rays}> 
+                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
+              </div>
+            </SwiperSlide>
             <SwiperSlide>
               <div className={styles.sub_rays}> 
                   <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
@@ -141,16 +155,20 @@ export default function Information() {
         <Swiper
             modules={[ Pagination, A11y , Autoplay]}
             spaceBetween={10}
-            slidesPerView={4}
-            key={2}
+            slidesPerView={
+              screenWidth >= 992 ? 4 :
+              screenWidth >= 768 ? 3 :
+              screenWidth >= 568 ? 2 :
+              1
+            }
+            key={"reys2"}
             thumbs
             autoplay={{
-              delay: 2000,
+              delay: 4000,
               disableOnInteraction: false,
             }}
             loop={true}
             pagination={{
-              el: ".swiper-pagination",
               clickable: true,
             }}
 

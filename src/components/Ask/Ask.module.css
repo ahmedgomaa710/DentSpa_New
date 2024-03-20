@@ -57,3 +57,15 @@
   font-weight: 100;
   margin: 20px 0;
 }
+
+@media (max-width: 1200px) {
+  .sub_askvideo iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ask {
+    display: none;
+  }
+}

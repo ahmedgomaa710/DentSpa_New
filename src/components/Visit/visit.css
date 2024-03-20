@@ -52,3 +52,12 @@
   align-items: center;
   gap: 10px;
 }
+
+@media (max-width: 768px) {
+  .total_visit ul {
+    width: 100%;
+  }
+  .visit {
+    padding: 0 5%;
+  }
+}

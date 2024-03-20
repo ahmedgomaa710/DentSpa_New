@@ -12,7 +12,6 @@ import "swiper/css/autoplay";
 SwiperCore.use([Pagination, A11y, Autoplay]);
 
 export default function Ask() {
-  const swiperRef = useRef(null);
 
   const opts = {
     height: "350",
@@ -36,21 +35,18 @@ export default function Ask() {
           href="https://www.dentspa.com.tr/city-choice-affects-dental-treatment-in-turkey/"
           target="_blank"
         >
-          {" "}
-          How Your City Of Choice Affects Your Dental Treatment In Turkey{" "}
+          How Your City Of Choice Affects Your Dental Treatment In Turkey
         </a>
         <a
           href="https://www.dentspa.com.tr/digital-smile-design-at-dentspa/"
           target="_blank"
         >
-          {" "}
-          Digital Smile Design at Dentspa{" "}
+          Digital Smile Design at Dentspa
         </a>
         <a
           href="https://www.dentspa.com.tr/smoking-after-tooth-extraction/"
           target="_blank"
         >
-          {" "}
           What You Should Know About Smoking After Tooth Extraction
         </a>
       </div>
@@ -59,11 +55,10 @@ export default function Ask() {
         <h2> patients had the same treatment that you are going to do </h2>
 
         <Swiper
-          ref={swiperRef}
           spaceBetween={10}
           slidesPerView={1}
           thumbs
-          loop={true}
+          key="ask1"
           pagination={{
             clickable: true,
           }}

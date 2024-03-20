@@ -37,4 +37,17 @@
   object-fit: contain;
   width: auto;
   height: 65px;
+  
+}
+
+@media (max-width: 768px) {
+  .main_treatment {
+    width: 800px;
+  }
+  .ov_treatment {
+    overflow-x: auto;
+  }
+  .treatment  h2{
+    padding: 0 5% ;
+  }
 }

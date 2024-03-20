@@ -12,15 +12,24 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import 'swiper/swiper-bundle.css';
+import useScreenWidth from "@/lib/customHooks/useScreenWidth";
 
 
 export default function Images() {
+  const screenWidth = useScreenWidth();
+
   return (
     <section className={styles.gallary}>
       <Swiper
         modules={[Pagination, A11y, Autoplay]}
         spaceBetween={10}
-        slidesPerView={3}
+        key={"gallary1"}
+        slidesPerView={
+          screenWidth >= 992 ? 4 :
+          screenWidth >= 768 ? 3 :
+          screenWidth >= 568 ? 2 :
+          1.2
+        }
         thumbs
         autoplay={{
           delay: 3500,

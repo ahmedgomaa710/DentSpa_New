@@ -23,3 +23,28 @@
   color: var(--color-Primary2);
   gap: 10px;
 }
+
+.btn_support {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn_top_ber button {
+  background-color: var(--color-Primary3);
+  height: 50px;
+  width: 50px;
+  color: var(--color-Primary1);
+  font-family: "font_medium";
+  font-size: 17px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .top_ber {
+    display: none;
+  }
+}

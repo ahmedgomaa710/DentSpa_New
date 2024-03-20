@@ -218,3 +218,32 @@ body {
   border: 1px solid #28282897;
   font-family: "font_main";
 }
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 0px) !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--color-Primary2) !important;
+}
+
+@media (max-width: 992px) {
+  .app {
+    flex-wrap: wrap;
+  }
+  .content_app {
+    width: calc(100%);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .main-container {
+    width: 100%;
+  }
+}

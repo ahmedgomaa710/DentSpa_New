@@ -69,3 +69,13 @@
   object-fit: contain;
 
 }
+
+
+@media (max-width: 1200px) {
+
+
+  .benner_discount h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}

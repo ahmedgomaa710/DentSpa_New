@@ -29,7 +29,7 @@ export default function NavBer() {
             Get support
           </a>
 
-          <div>
+          <div className={styles.btn_top_ber}>
             <button onClick={handleChangLangContext}>
               <i className="bi bi-globe2"></i>
               <span>{langCtx}</span>
