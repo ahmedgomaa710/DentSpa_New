@@ -25,8 +25,8 @@ export default function Images() {
         spaceBetween={10}
         key={"gallary1"}
         slidesPerView={
-          screenWidth >= 992 ? 4 :
-          screenWidth >= 768 ? 3 :
+          screenWidth >= 992 ? 3 :
+          screenWidth >= 768 ? 2 :
           screenWidth >= 568 ? 2 :
           1.2
         }

@@ -25,13 +25,8 @@
   font-size: 18px;
   padding-left: 30px;
   font-family: "font_medium";
-  padding-right: 25px;
   position: relative;
-  
   line-height: 22px;
-
-
-
 }
 
 .medical_checked li::after {
@@ -71,5 +66,25 @@
   .medical {
     padding: 0 5%;
   }
+  .medical_checked li {
+    width: calc(100% / 2 - 10px);
+    font-size: 17px;
+  }
+
+  .medical_checked {
+    gap: 10px;
+  }
+  
+}
+
+@media (max-width: 576px) {
+ .medical_checked li {
+    font-size: 14px;
+  }
+  .sub_medical h2 {
+    font-size: 15px;
+    color: var(--color-Primary2);
+    margin-bottom: 5px;
+}
 
 }

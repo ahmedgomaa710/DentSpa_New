@@ -30,8 +30,32 @@
 
 .img_package img {
   object-fit: contain;
-  max-width: 45px;
+  width: 40px;
   height: auto;
-  width: auto;
-  max-height: 45px;
+}
+
+@media (max-width: 768px) {
+  .package {
+    padding: 0 5%;
+    margin: 40px 0;
+  }
+  .sub_package {
+    text-align: start;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .img_package {
+    height: 45px;
+    margin: 0;
+    width: 45px;
+  }
+  .sub_package h2 {
+    width: calc(100% - 55px);
+    font-size: 14px;
+  }
+  .img_package img {
+    width: 25px;
+  }
 }

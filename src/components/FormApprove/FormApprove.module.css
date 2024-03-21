@@ -94,3 +94,22 @@
   font-size: 16px;
   color: var(--color-Primary2);
 }
+
+@media (max-width: 768px) {
+  .info_approve p i {
+    font-size: 12px;
+    line-height: 19px;
+    display: block;
+  }
+  .check_decline ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .sub_check_decline label {
+    padding: 8px 15px;
+    font-size: 14px;
+    height: 35px;
+  }
+}

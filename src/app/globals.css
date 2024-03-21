@@ -238,12 +238,14 @@ body {
   .content_app {
     width: calc(100%);
   }
-
 }
 
 @media (max-width: 768px) {
-
   .main-container {
     width: 100%;
+  }
+  p {
+    font-size: 14px;
+    line-height: 25px;
   }
 }

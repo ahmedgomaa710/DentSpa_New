@@ -1,7 +1,6 @@
 "use client"
 import React, { useContext } from "react";
 import styles from "./Information.module.css";
-import Title from "../Title/Title";
 import Image from "next/image";
 
 import Box from "@mui/material/Box";
@@ -18,6 +17,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import { LangContext } from "@/Context/LangContext";
 import useScreenWidth from "@/lib/customHooks/useScreenWidth";
+import Title from "../Title/Title";
 
 
 export default function Information() {

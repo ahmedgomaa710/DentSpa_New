@@ -13,76 +13,76 @@ export default function Package() {
 
         <Box className={styles.main_package} sx={{ flexGrow: 1 }} >
           <Grid container spacing={2} rowSpacing={2}>
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a1.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a1.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Panoramic Radiography - CBCT </h2>
               </div>
             </Grid>
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a2.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a2.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Painless Anesthesia </h2>
               </div>
             </Grid>
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a3.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a3.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Painless Anesthesia </h2>
               </div>
             </Grid>
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a4.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a4.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Painless Anesthesia </h2>
               </div>
             </Grid>
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a5.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a5.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Painless Anesthesia </h2>
               </div>
             </Grid>
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a6.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a6.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Painless Anesthesia </h2>
               </div>
             </Grid>
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a7.png" alt="images" width={25} height={25} />
-                </div>
-                <h2> Painless Anesthesia </h2>
-              </div>
-            </Grid>
-        
-            <Grid item lg={4} xs={6}>
-              <div className={styles.sub_package}>
-                <div className={styles.img_package}>
-                  <Image src="/images/a8.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a7.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Painless Anesthesia </h2>
               </div>
             </Grid>
         
-            <Grid item lg={4} xs={6}>
+            <Grid item lg={4} xs={12}>
               <div className={styles.sub_package}>
                 <div className={styles.img_package}>
-                  <Image src="/images/a9.png" alt="images" width={25} height={25} />
+                  <Image src="/images/a8.svg" alt="images" width={25} height={25} />
+                </div>
+                <h2> Painless Anesthesia </h2>
+              </div>
+            </Grid>
+        
+            <Grid item lg={4} xs={12}>
+              <div className={styles.sub_package}>
+                <div className={styles.img_package}>
+                  <Image src="/images/a9.svg" alt="images" width={25} height={25} />
                 </div>
                 <h2> Painless Anesthesia </h2>
               </div>

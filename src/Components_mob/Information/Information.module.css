@@ -1,0 +1,62 @@
+.information {
+  margin: 40px 0 20px;
+}
+
+.general {
+  margin-bottom: 35px;
+}
+.general > h2 {
+  color: var(--color-Primary2);
+  margin: 0 0 25px;
+}
+
+.rays > h2 {
+  color: var(--color-Primary2);
+  margin: 0 0 25px;
+}
+.sub_general {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img_general {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-Primary3);
+}
+.img_general img {
+  width: 60%;
+}
+
+.sub_general h2 {
+  font-size: 13px;
+  color: var(--color-Primary2);
+}
+
+.sub_rays {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+.slider_reys {
+  margin: 25px 0;
+}
+.sub_rays img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.sub_rays {
+  margin: 0 0 0px 0;
+}
+
+.information {
+  padding: 0 5%;
+}

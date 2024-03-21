@@ -1,6 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Information from "@/components/Information/Information";
 import Medical from "@/components/Medical/Medical";
 import Treatment from "@/components/treatment/Treatment";
 import Visit1 from "@/components/Visit/Visit";
@@ -10,20 +7,21 @@ import Discount from "@/components/Discount/Discount";
 import Videos from "@/components/Videos/Videos";
 import Images from "@/components/Images_after/Images";
 import Package from "@/components/Package_Includes/Package";
+import If_Information from "@/components/If_Information/If_Information";
 
 export default function Home() {
   return (
     <div className="home">
-      <Information />
+      <If_Information />
       <Medical />
       <Treatment />
       <Visit1 />
       <Visit2 />
       <FormApprove />
       <Discount />
-      <Videos /> 
+      <Videos />
       <Images />
-      <Package /> 
+      <Package />
     </div>
   );
 }
