@@ -31,38 +31,38 @@ export default function Treatment() {
           </div>
           <div className={styles.images_treatment}> 
               <ul> 
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p1.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p2.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
-                  <li><Image src="/images/p3.png" alt="logo" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p1.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p2.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
+                  <li><Image src="/images/p4.png" alt="treatment" width={40} height={70} /></li>
               </ul>
           </div>
           <div className={styles.num_plan}>
