@@ -3,8 +3,8 @@ import  { LangContext } from "@/Context/LangContext";
 import React, { useContext, useEffect } from "react";
 import Hero from "../hero/Hero";
 import NavBer from "../navBer/NavBer";
-const MyLazyHero = dynamic(() => import('../hero/Hero'));
-const MyLazyHero_mob = dynamic(() => import('../../Components_mob/Hero/Hero'));
+const MyLazyHero = dynamic(() => import('../hero/Hero'), { ssr: false });
+const MyLazyHero_mob = dynamic(() => import('../../Components_mob/Hero/Hero') , { ssr: false });
 import dynamic from 'next/dynamic';
 import Ask from "../Ask/Ask";
 import useScreenWidth from "@/lib/customHooks/useScreenWidth"
@@ -17,6 +17,8 @@ export default function Layout(props) {
   }, []);
   return (
     <html lang="en">
+      
+
       <body className="body">
         <div className={langCtx === "ar" ? "lang_ar" : "lang_en"}  dir={langCtx === "ar" ? "rtl" : "ltr"}>
 

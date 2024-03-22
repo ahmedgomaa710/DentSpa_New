@@ -10,6 +10,7 @@ export const metadata = {
     "Here in DentSpa® we put your interests first. Our mission is to provide you with the safest and highest-quality options to choose from. We take your needs very seriously. Our staff are hand-selected based on strict qualification criteria and are subject to constant quality control through DentSpa®.",
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <LangContextProvider>
