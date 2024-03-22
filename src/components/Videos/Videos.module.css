@@ -13,7 +13,33 @@
   object-fit: cover;
   border-radius: 10px;
 }
+
 .gallary {
   background-color: var(--color-Primary4);
   padding: 35px;
+}
+
+@media (max-width: 992px) {
+  .videos {
+    padding: 0 5%;
+  }
+
+  .text_hero h2 {
+    font-size: 35px;
+    line-height: 75px;
+    margin-bottom: 25px;
+    height: 125px;
+  }
+
+  .main_videos {
+    padding: 0;
+  }
+
+  .sub_video {
+    padding-bottom: 50px;
+  }
+
+  .main_videos {
+    background-color: transparent;
+  }
 }

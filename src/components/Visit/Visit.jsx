@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+import React, { useContext } from "react";
 import Title from "../Title/Title";
 import Tooltip from "@mui/material/Tooltip";
 import Image from "next/image";
@@ -10,6 +11,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import { LangContext } from "@/Context/LangContext";
 
 function createData(id, name, calories, fat, carbs) {
   return { id, name, calories, fat, carbs };
@@ -40,15 +42,19 @@ const rows = [
 ];
 
 export default function Visit1() {
+  const langCtx = useContext(LangContext);
+
   return (
-    <section className="visit">
+    <section className="visit" data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="700">
       <Title name="Visit 1" />
 
       <TableContainer>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="title_visit"> # Treatment </TableCell>
+              <TableCell className="title_visit" align="left" > # Treatment </TableCell>
               <TableCell className="title_visit" align="center">
                 Tooth{" "}
               </TableCell>

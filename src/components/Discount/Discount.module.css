@@ -58,6 +58,11 @@
   cursor: pointer;
 }
 
+.main_discount ul li button:hover {
+  background-color: var(--color-Primary1);
+  color: var(--color-white);
+}
+
 .stripe {
   text-align: center;
 
@@ -71,11 +76,54 @@
 }
 
 
+
 @media (max-width: 1200px) {
 
 
   .benner_discount h2 {
     font-size: 25px;
     line-height: 35px;
+  }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+  .discount {
+    margin: 40px 0;
+  }
+
+  .benner_discount h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .discount {
+    padding: 0 5%;
+  }
+
+  .benner_discount {
+    padding: 25px;
+    box-shadow: 0 0 10px #30d9cb60;
+    min-height: auto;
+  }
+
+
+
+  .main_discount ul li button {
+
+    height: 45px;
+    font-size: 19px;
+    padding: 5px 21px;
+    border-radius: 5px;
+  }
+
+  .main_discount h2 {
+    font-size: 15px;
+    margin: auto;
+    width: 100%;
+    line-height: 24px;
   }
 }

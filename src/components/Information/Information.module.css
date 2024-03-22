@@ -49,8 +49,39 @@
   margin: 0 0 50px 0;
 }
 
+
+.sub_general:hover img {
+  animation: swing 1s infinite both;
+  -webkit-animation: swing 1s infinite both;
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
 @media (max-width: 768px) {
   .information {
     padding: 0 5%;
   }
 }
+
+

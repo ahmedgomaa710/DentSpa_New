@@ -18,6 +18,7 @@
 .sub_package h2 {
   color: var(--color-Primary2);
   font-size: 17px;
+  transition: all .3s linear;
 }
 
 .package {
@@ -33,7 +34,37 @@
   width: 40px;
   height: auto;
 }
+.sub_package:hover h2{
+  color: var(--color-Primary1);
+}
 
+.sub_package:hover img {
+  animation: swing 1s infinite both;
+  -webkit-animation: swing 1s infinite both;
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
 @media (max-width: 768px) {
   .package {
     padding: 0 5%;

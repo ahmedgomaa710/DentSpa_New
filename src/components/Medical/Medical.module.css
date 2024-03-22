@@ -1,9 +1,11 @@
 .medical {
   margin: 0px 0 60px;
 }
+
 .sub_medical {
   margin: 30px 0;
 }
+
 .sub_medical h2 {
   font-size: 18px;
   color: var(--color-Primary2);
@@ -40,6 +42,18 @@
   border-radius: 50%;
   border: 1px solid var(--color-Primary2);
 }
+.medical_ar li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.medical_ar li::after {
+  right: 0;
+  left: auto;
+}
+.medical_ar li::before {
+  right: 3px;
+  left: auto;
+}
 
 .active::before {
   content: "";
@@ -62,10 +76,12 @@
   border-radius: 3px;
 }
 
+
 @media (max-width: 768px) {
   .medical {
     padding: 0 5%;
   }
+
   .medical_checked li {
     width: calc(100% / 2 - 10px);
     font-size: 17px;
@@ -74,17 +90,18 @@
   .medical_checked {
     gap: 10px;
   }
-  
+
 }
 
 @media (max-width: 576px) {
- .medical_checked li {
+  .medical_checked li {
     font-size: 14px;
   }
+
   .sub_medical h2 {
     font-size: 15px;
     color: var(--color-Primary2);
     margin-bottom: 5px;
-}
+  }
 
 }

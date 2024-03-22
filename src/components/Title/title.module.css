@@ -6,3 +6,14 @@
   font-size: 28px;
   color: var(--color-Primary2);
 }
+
+
+@media (max-width: 576px) {
+
+  .title h2 {
+    font-family: "font_medium";
+    font-size: 20px;
+    color: var(--color-Primary2);
+  }
+  
+}

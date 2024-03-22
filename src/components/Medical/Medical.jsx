@@ -1,7 +1,13 @@
-import React from "react";
+'use client'
+import React, { useContext } from "react";
 import Title from "../Title/Title";
 import styles from "./Medical.module.css";
+import { LangContext } from "@/Context/LangContext";
 export default function Medical() {
+  const langCtx = useContext(LangContext);
+
+
+  
   return (
     <section className={styles.medical}>
       <Title name="Medical History Anamnesis" />
@@ -10,7 +16,7 @@ export default function Medical() {
          
           Do you have or have had any of the following medical conditions?
         </h2>
-        <ul className={styles.medical_checked}>
+        <ul className={`${styles.medical_checked} ${langCtx === "ar" ? styles.medical_ar : null } `}>
           <li> HIV </li>
           <li className={styles.active}> Cardiac Disorder </li>
           <li> Blood Pressure </li>
@@ -40,6 +46,7 @@ export default function Medical() {
       </div>
       <div className={styles.sub_medical}>
         <h2>Wishes </h2>
+        
         <div className={styles.answer_sub_medical}>
          
           ex: I have pain while eating, and I don’t smile to hide my bad-looking

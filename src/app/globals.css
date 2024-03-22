@@ -150,6 +150,7 @@ body {
 .mr-section {
   margin: 90px 0;
 }
+
 .pg-section {
   padding: 90px 0;
 }
@@ -159,6 +160,7 @@ body {
   align-items: flex-start;
   gap: 20px;
 }
+
 .content_app {
   width: calc(75% - 25px);
 }
@@ -177,6 +179,7 @@ body {
 .ctm-btn:hover {
   background-color: var(--color-Primary2);
 }
+
 .ctm-btn2 {
   height: 60px;
   border-radius: 10px;
@@ -195,9 +198,11 @@ body {
 .ctm-btn2 h3 {
   font-size: 16px;
 }
+
 .ctm-btn2 span {
   font-size: 11px;
 }
+
 .ctm-btn2:hover {
   background-color: var(--color-Primary1);
   color: var(--color-white);
@@ -221,7 +226,7 @@ body {
 
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: var(--swiper-pagination-bottom, 0px) !important;
 }
@@ -231,12 +236,28 @@ body {
   background: var(--color-Primary2) !important;
 }
 
+.lang_ar .swiper {
+  direction: ltr;
+}
+.lang_ar .visit thead tr th:nth-of-type(1) {
+  border-bottom: transparent;
+  text-align: right;
+}
+.lang_ar .total_visit ul {
+
+  margin: 0 auto 0 0;
+}
 @media (max-width: 992px) {
   .app {
     flex-wrap: wrap;
   }
+
   .content_app {
     width: calc(100%);
+  }
+
+  .ctm-btn2 span {
+    font-size: 9px;
   }
 }
 
@@ -244,8 +265,10 @@ body {
   .main-container {
     width: 100%;
   }
+
   p {
     font-size: 14px;
     line-height: 25px;
   }
 }
+
