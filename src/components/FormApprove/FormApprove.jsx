@@ -1,50 +1,34 @@
-'use client'
+'use client';
 import React, { useState } from "react";
 import styles from "./FormApprove.module.css";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 
-function FormDecline() {
+function FormDecline({ api }) {
+console.log("FormDecline" , api);
+  // const showdecline_reasons = api.map((e, index) => (
+  //   <li className={styles.sub_check_decline} key={index}>
+  //     <input type="checkbox" name="decline" hidden id={`decline-${e.id}`} />
+  //     <label htmlFor={`decline-${e.id}`}> {e.reason_text}</label>
+  //   </li>
+  // ))
   return (
     <div className={styles.form_decline}>
       <form>
         <h2> The reason of Decline </h2>
         <div className={styles.check_decline}>
           <ul>
-            <li className={styles.sub_check_decline}>
-              <input type="checkbox" name="decline" hidden id="decline-1" />
-              <label htmlFor="decline-1"> Price</label>
-            </li>
-            <li className={styles.sub_check_decline}>
-              <input type="checkbox" name="decline" hidden id="decline-2" />
-              <label htmlFor="decline-2"> I Will come later</label>
-            </li>
-            <li className={styles.sub_check_decline}>
-              <input type="checkbox" name="decline" hidden id="decline-3" />
-              <label htmlFor="decline-3"> Agent </label>
-            </li>
-            <li className={styles.sub_check_decline}>
-              <input type="checkbox" name="decline" hidden id="decline-4" />
-              <label htmlFor="decline-4"> Flight is expensive</label>
-            </li>
-            <li className={styles.sub_check_decline}>
-              <input type="checkbox" name="decline" hidden id="decline-5" />
-              <label htmlFor="decline-5"> I am looking to change my plan.</label>
-            </li>
-            <li className={styles.sub_check_decline}>
-              <input type="checkbox" name="decline" hidden id="decline-6" />
-              <label htmlFor="decline-6"> Other </label>
-            </li>
+            {/* {showdecline_reasons} */}
           </ul>
 
 
 
         </div>
         <textarea className="ctm-input" ></textarea>
-        <div className={styles.main_btn_dene}> 
-        <button className={styles.btn_dene}> Submit </button>
-            
+        <div className={styles.main_btn_dene}>
+          <button className={styles.btn_dene}> Submit </button>
+
         </div>
       </form>
     </div>
@@ -52,7 +36,7 @@ function FormDecline() {
 }
 
 export default function FormApprove() {
-    const [hendleDecline , setHendleDecline ] = useState(false) 
+  const [hendleDecline, setHendleDecline] = useState(false)
   return (
     <section className={styles.form_approve}>
       <form>
@@ -101,7 +85,7 @@ export default function FormApprove() {
         </Box>
       </form>
       {hendleDecline ? <FormDecline /> : null}
-      
+
     </section>
   );
 }

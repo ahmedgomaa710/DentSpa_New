@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Pagination, A11y, Autoplay } from "swiper/modules";
+import { Pagination, A11y, Autoplay } from "swiper/modules";
 
 // styles swiper
 import "swiper/css";
@@ -20,7 +20,32 @@ import useScreenWidth from "@/lib/customHooks/useScreenWidth";
 import Title from "../Title/Title";
 
 
-export default function Information() {
+export default function Information({ api }) {
+
+  console.log(api);
+
+
+  const { case_id, gender, age, language, country, guest_id, x_rays, intraoral_records } = api
+
+  const showRays = x_rays.map((e, index) => (
+    <SwiperSlide key={index}>
+      <div className={styles.sub_rays}>
+        <Image src={e} alt="rays" width={320} height={230} />
+      </div>
+    </SwiperSlide>
+  ))
+  const showintraoral = intraoral_records.map((e, index) => (
+    <SwiperSlide key={index}>
+      <div className={styles.sub_rays}>
+        <Image src={e} alt="rays" width={320} height={230} />
+      </div>
+    </SwiperSlide>
+  ))
+
+
+
+
+
   const langCtx = useContext(LangContext);
   const screenWidth = useScreenWidth();
   return (
@@ -43,7 +68,7 @@ export default function Information() {
                 <div className={styles.img_general}>
                   <Image src="/images/1.svg" alt="img" width={30} height={30} />
                 </div>
-                <h2> Case ID </h2>
+                <h2> {case_id} </h2>
               </div>
             </Grid>
             <Grid item lg={4} xs={6}>
@@ -51,7 +76,7 @@ export default function Information() {
                 <div className={styles.img_general}>
                   <Image src="/images/1.svg" alt="img" width={30} height={30} />
                 </div>
-                <h2> Case ID </h2>
+                <h2>{gender} </h2>
               </div>
             </Grid>
             <Grid item lg={4} xs={6}>
@@ -59,7 +84,7 @@ export default function Information() {
                 <div className={styles.img_general}>
                   <Image src="/images/1.svg" alt="img" width={30} height={30} />
                 </div>
-                <h2> Case ID </h2>
+                <h2> {age} </h2>
               </div>
             </Grid>
             <Grid item lg={4} xs={6}>
@@ -67,7 +92,7 @@ export default function Information() {
                 <div className={styles.img_general}>
                   <Image src="/images/1.svg" alt="img" width={30} height={30} />
                 </div>
-                <h2> Case ID </h2>
+                <h2> {language} </h2>
               </div>
             </Grid>
             <Grid item lg={4} xs={6}>
@@ -75,7 +100,7 @@ export default function Information() {
                 <div className={styles.img_general}>
                   <Image src="/images/1.svg" alt="img" width={30} height={30} />
                 </div>
-                <h2> Case ID </h2>
+                <h2> {country}</h2>
               </div>
             </Grid>
             <Grid item lg={4} xs={6}>
@@ -83,25 +108,25 @@ export default function Information() {
                 <div className={styles.img_general}>
                   <Image src="/images/1.svg" alt="img" width={30} height={30} />
                 </div>
-                <h2> Case ID </h2>
+                <h2>{guest_id} </h2>
               </div>
             </Grid>
           </Grid>
         </Box>
       </div>
 
-      <div className={styles.rays}>
+      {x_rays.length === 0 ? null : <div className={styles.rays}>
         <h2> X-Rays </h2>
 
-        <div className={styles.slider_reys}> 
-        <Swiper
-            modules={[ Pagination, A11y , Autoplay]}
+        <div className={styles.slider_reys}>
+          <Swiper
+            modules={[Pagination, A11y, Autoplay]}
             spaceBetween={10}
             slidesPerView={
               screenWidth >= 992 ? 4 :
-              screenWidth >= 768 ? 3 :
-              screenWidth >= 568 ? 2 :
-              1
+                screenWidth >= 768 ? 3 :
+                  screenWidth >= 568 ? 2 :
+                    1
             }
             key={"rays1"}
             thumbs
@@ -115,51 +140,27 @@ export default function Information() {
             }}
 
           >
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
+
+            {x_rays.length === 0 ? null : showRays}
+
+
           </Swiper>
         </div>
       </div>
-      <div className={styles.rays}>
+      }
+
+      {showintraoral.length === 0 ? null : <div className={styles.rays}>
         <h2> Intraoral Records  </h2>
 
-        <div className={styles.slider_reys}> 
-        <Swiper
-            modules={[ Pagination, A11y , Autoplay]}
+        <div className={styles.slider_reys}>
+          <Swiper
+            modules={[Pagination, A11y, Autoplay]}
             spaceBetween={10}
             slidesPerView={
               screenWidth >= 992 ? 4 :
-              screenWidth >= 768 ? 3 :
-              screenWidth >= 568 ? 2 :
-              1
+                screenWidth >= 768 ? 3 :
+                  screenWidth >= 568 ? 2 :
+                    1
             }
             key={"reys2"}
             thumbs
@@ -173,34 +174,14 @@ export default function Information() {
             }}
 
           >
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={styles.sub_rays}> 
-                  <Image src={"/images/img1.png"} alt="rays" width={320} height={230} /> 
-              </div>
-            </SwiperSlide>
+
+            {showintraoral.length === 0 ? null : showintraoral}
+
           </Swiper>
         </div>
-      </div>
+      </div>}
+
+
     </section>
   );
 }

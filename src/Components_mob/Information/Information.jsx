@@ -8,7 +8,13 @@ import Grid from "@mui/material/Grid";
 import { LangContext } from "@/Context/LangContext";
 import Title from "@/components/Title/Title";
 
-export default function Information() {
+export default function Information({api}) {
+
+  
+console.log(api);
+
+
+
   const langCtx = useContext(LangContext);
   return (
     <section className={styles.information}>

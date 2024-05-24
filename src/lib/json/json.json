@@ -1,0 +1,527 @@
+{
+    "status": true,
+    "message": "Offer loaded successfully.",
+    "data": {
+        "offer": {
+            "offer_id": 1,
+            "code": "mMWtKc4KM",
+            "status": "approved",
+            "patient_name": "Ibrahim Hasan",
+            "total_price": "$ 0.00",
+            "decline_reason": null,
+            "decline_note": ""
+        },
+        "diagnosis": {
+            "case_id": 7139,
+            "gender": "Male",
+            "age": "50",
+            "language": "English",
+            "country": "United States",
+            "guest_id": "DS255849",
+            "x_rays": [ "https://img.youtube.com/vi/6joItRs9de0/0.jpg" , "https://img.youtube.com/vi/6joItRs9de0/0.jpg" ,"https://img.youtube.com/vi/6joItRs9de0/0.jpg" ,"https://img.youtube.com/vi/6joItRs9de0/0.jpg" , "https://img.youtube.com/vi/6joItRs9de0/0.jpg" ],
+            "intraoral_records": [],
+            "hiv": true,
+            "cardiac_disorder": true,
+            "blood_pressure": true,
+            "hepatitis": true,
+            "diabetes": true,
+            "asthma": true,
+            "epilepsy": true,
+            "cancer": true,
+            "other": true,
+            "medical_history": "",
+            "chief_complaint": "TEST",
+            "wishes": "Test",
+            "expectations": "Test"
+        },
+        "treatment_plan": {
+            "treatment_plan": [
+                {
+                    "toothNo": 18,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/18.png",
+                        "https://staging.diagnosdent.com/assets/images/teeth/18.png"
+                    ]
+                },
+                {
+                    "toothNo": 48,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/48.png"
+                    ]
+                },
+                {
+                    "toothNo": 17,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/17.png"
+                    ]
+                },
+                {
+                    "toothNo": 47,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/47.png"
+                    ]
+                },
+                {
+                    "toothNo": 16,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/16.png"
+                    ]
+                },
+                {
+                    "toothNo": 46,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/46.png"
+                    ]
+                },
+                {
+                    "toothNo": 15,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/15.png"
+                    ]
+                },
+                {
+                    "toothNo": 45,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/45.png"
+                    ]
+                },
+                {
+                    "toothNo": 14,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/14.png"
+                    ]
+                },
+                {
+                    "toothNo": 44,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/44.png"
+                    ]
+                },
+                {
+                    "toothNo": 13,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/13.png"
+                    ]
+                },
+                {
+                    "toothNo": 43,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/43.png"
+                    ]
+                },
+                {
+                    "toothNo": 12,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/12.png"
+                    ]
+                },
+                {
+                    "toothNo": 42,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/42.png"
+                    ]
+                },
+                {
+                    "toothNo": 11,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/11.png"
+                    ]
+                },
+                {
+                    "toothNo": 41,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/41.png"
+                    ]
+                },
+                {
+                    "toothNo": 21,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/21.png"
+                    ]
+                },
+                {
+                    "toothNo": 31,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/31.png"
+                    ]
+                },
+                {
+                    "toothNo": 22,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/22.png"
+                    ]
+                },
+                {
+                    "toothNo": 32,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/32.png"
+                    ]
+                },
+                {
+                    "toothNo": 23,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/23.png"
+                    ]
+                },
+                {
+                    "toothNo": 33,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/33.png"
+                    ]
+                },
+                {
+                    "toothNo": 24,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/24.png"
+                    ]
+                },
+                {
+                    "toothNo": 34,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/34.png"
+                    ]
+                },
+                {
+                    "toothNo": 25,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/25.png"
+                    ]
+                },
+                {
+                    "toothNo": 35,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/35.png"
+                    ]
+                },
+                {
+                    "toothNo": 26,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/26.png"
+                    ]
+                },
+                {
+                    "toothNo": 36,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/36.png"
+                    ]
+                },
+                {
+                    "toothNo": 27,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/27.png"
+                    ]
+                },
+                {
+                    "toothNo": 37,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/37.png"
+                    ]
+                },
+                {
+                    "toothNo": 28,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/28.png"
+                    ]
+                },
+                {
+                    "toothNo": 38,
+                    "images": [
+                        "https://staging.diagnosdent.com/assets/images/teeth/38.png"
+                    ]
+                }
+            ],
+            "visits": [
+                {
+                    "id": 12141,
+                    "treatments": [
+                        {
+                            "treatment_name": "Partial Denture (Reinforced with Cast Metal) Single Jaw",
+                            "teeth_count": 2,
+                            "details": "الفك السفلي, الفك العلوي",
+                            "unit": [
+                                {
+                                    "price": "$ 0.00",
+                                    "offer_price": 0,
+                                    "extra_price": 0
+                                }
+                            ],
+                            "total": "$ 2,052.00",
+                            "article_title": "Chameleons have an incredible tongue! Just watch this chameleon catch a cricket in slow motion.",
+                            "article_link": "https://youtube.com/shorts/akmbvc_9CnA?si=63BeO89JSAaJAbfL"
+                        }
+                    ]
+                }
+            ]
+        },
+        "translations": [
+            {
+                "key": "F_get_support",
+                "value": "Get support"
+            },
+            {
+                "key": "F_dental_diagnostic_report",
+                "value": "Dental Diagnostic Report"
+            },
+            {
+                "key": "F_prepared_for",
+                "value": "Prepared For"
+            },
+            {
+                "key": "F_dent_spa_intro",
+                "value": "Here in DentSpa® we put your interests first. Our mission is to provide you with the safest and highest-quality options to choose from. We take your needs very seriously.  Our staff are hand-selected based on strict qualification criteria and are subject to constant quality control through DentSpa®."
+            },
+            {
+                "key": "F_your_information",
+                "value": "Your Information"
+            },
+            {
+                "key": "F_general",
+                "value": "General"
+            },
+            {
+                "key": "F_x_rays",
+                "value": "X-Rays"
+            },
+            {
+                "key": "F_intraoral_records",
+                "value": "Intraoral Records"
+            },
+            {
+                "key": "F_medical_history_anamnesis",
+                "value": "Medical History Anamnesis"
+            },
+            {
+                "key": "F_medical_conditions_question",
+                "value": "Do you have or have had any of the following medical conditions?"
+            },
+            {
+                "key": "F_hiv",
+                "value": "HIV"
+            },
+            {
+                "key": "F_cardiac_disorder",
+                "value": "Cardiac Disorder"
+            },
+            {
+                "key": "F_hepatitis",
+                "value": "Hepatitis"
+            },
+            {
+                "key": "F_asthma",
+                "value": "Asthma"
+            },
+            {
+                "key": "F_blood_pressure",
+                "value": "Blood Pressure"
+            },
+            {
+                "key": "F_epilepsy",
+                "value": "Epilepsy"
+            },
+            {
+                "key": "F_diabetes",
+                "value": "Diabetes"
+            },
+            {
+                "key": "F_cancer",
+                "value": "Cancer"
+            },
+            {
+                "key": "F_other",
+                "value": "Other"
+            },
+            {
+                "key": "F_major_illness_question",
+                "value": "Is there a significant major illness you had in the past?"
+            },
+            {
+                "key": "F_surgical_operations_question",
+                "value": "What are the surgical operations you had before?"
+            },
+            {
+                "key": "F_chief_complaint",
+                "value": "Chief Complaint"
+            },
+            {
+                "key": "F_wishes",
+                "value": "Wishes"
+            },
+            {
+                "key": "F_expectations",
+                "value": "Expectations"
+            },
+            {
+                "key": "F_your_treatment_plan",
+                "value": "Your Treatment Plan"
+            },
+            {
+                "key": "F_treatment",
+                "value": "Treatment"
+            },
+            {
+                "key": "F_tooth",
+                "value": "Tooth"
+            },
+            {
+                "key": "F_unit",
+                "value": "Unit"
+            },
+            {
+                "key": "F_total",
+                "value": "Total"
+            },
+            {
+                "key": "F_sub_total",
+                "value": "Sub-Total:"
+            },
+            {
+                "key": "F_discount",
+                "value": "Discount:"
+            },
+            {
+                "key": "F_total",
+                "value": "Total:"
+            },
+            {
+                "key": "F_approve",
+                "value": "Approve"
+            },
+            {
+                "key": "F_decline_treatment_plan",
+                "value": "I want to decline the treatment plan"
+            },
+            {
+                "key": "F_download",
+                "value": "Download"
+            },
+            {
+                "key": "F_treatment_plan",
+                "value": "the treatment plan"
+            },
+            {
+                "key": "F_reason_of_decline",
+                "value": "The reason of Decline"
+            },
+            {
+                "key": "F_approval_message",
+                "value": "When you approve the treatment plan, your consultant will discuss the finalization details of your visit with you."
+            },
+            {
+                "key": "F_submit",
+                "value": "Submit"
+            },
+            {
+                "key": "F_discount_offer",
+                "value": "you can get a 5% discount by making a deposit payment."
+            },
+            {
+                "key": "F_down_payment_question",
+                "value": "Please select the amount of the down payment that you would like to pay."
+            },
+            {
+                "key": "F_patients_had_the_same_treatment",
+                "value": "Patients had the same treatment that you are going to do"
+            },
+            {
+                "key": "F_the_package_includes",
+                "value": "The package includes:"
+            },
+            {
+                "key": "F_panoramic_radiography",
+                "value": "Panoramic Radiography - CBCT"
+            },
+            {
+                "key": "F_consultation_with_all_specialist",
+                "value": "Consultation With All Specialist"
+            },
+            {
+                "key": "F_personal_advisor_translator",
+                "value": "Personal Advisor / Translator"
+            },
+            {
+                "key": "F_post_operative_medication",
+                "value": "Post Operative Medication"
+            },
+            {
+                "key": "F_professional_before_after_photos",
+                "value": "Professional Before & After Photos"
+            },
+            {
+                "key": "F_official_warranty_certificate",
+                "value": "Official Warranty Certificate"
+            },
+            {
+                "key": "F_lifetime_aftercare_service",
+                "value": "Lifetime Aftercare Service"
+            },
+            {
+                "key": "F_painless_anesthesia",
+                "value": "Painless Anesthesia"
+            },
+            {
+                "key": "F_private_vip_transportation",
+                "value": "Private VIP Transportation"
+            },
+            {
+                "key": "F_feedback_request",
+                "value": "Please provide us with your feedback."
+            },
+            {
+                "key": "F_speed_of_response",
+                "value": "The speed of response"
+            },
+            {
+                "key": "F_the_medical_consultant",
+                "value": "The Medical Consultant"
+            },
+            {
+                "key": "F_topics_that_may_have_your_interest",
+                "value": "topics that may have your interest"
+            }
+        ],
+        "decline_reasons": [
+            {
+                "decline_reason_id": 1,
+                "reason_text": "Price is too high"
+            },
+            {
+                "decline_reason_id": 2,
+                "reason_text": "Not satisfied with the treatment plan"
+            },
+            {
+                "decline_reason_id": 3,
+                "reason_text": "Found a better offer elsewhere"
+            },
+            {
+                "decline_reason_id": 4,
+                "reason_text": "Personal reasons"
+            },
+            {
+                "decline_reason_id": 5,
+                "reason_text": "Change in financial situation"
+            },
+            {
+                "decline_reason_id": 6,
+                "reason_text": "Prefer a different specialist"
+            }
+        ],
+        "videos": [
+            {
+                "link": "https://www.youtube.com/watch?v=utBsRQfUIFI",
+                "image": "https://img.youtube.com/vi/utBsRQfUIFI/0.jpg"
+            },
+            {
+                "link": "https://www.youtube.com/shorts/KpzeZphSExY",
+                "image": "https://img.youtube.com/vi/KpzeZphSExY/0.jpg"
+            },
+            {
+                "link": "https://www.youtube.com/shorts/6joItRs9de0",
+                "image": "https://img.youtube.com/vi/6joItRs9de0/0.jpg"
+            },
+            {
+                "link": "https://www.youtube.com/shorts/Nf0yQJt-6Nw",
+                "image": "https://img.youtube.com/vi/Nf0yQJt-6Nw/0.jpg"
+            }
+        ]
+    }
+}

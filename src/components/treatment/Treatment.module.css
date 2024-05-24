@@ -15,9 +15,11 @@
   font-size: 14px;
   text-align: center;
 }
+
 .images_treatment {
   margin: 20px 0;
 }
+
 .images_treatment ul {
   gap: 10px;
   display: flex;
@@ -31,23 +33,36 @@
   text-align: center;
   font-size: 14px;
   text-align: center;
+  position: relative;
+}
+
+.images_treatment ul li img:nth-of-type(1) {
+  position: sticky;
+  transform: none;
 }
 
 .images_treatment ul li img {
   object-fit: contain;
   width: auto;
   height: 65px;
-  
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 768px) {
   .main_treatment {
     width: 800px;
   }
+
   .ov_treatment {
     overflow-x: auto;
   }
-  .treatment  h2{
-    padding: 0 5% ;
+
+  .treatment h2 {
+    padding: 0 5%;
   }
 }

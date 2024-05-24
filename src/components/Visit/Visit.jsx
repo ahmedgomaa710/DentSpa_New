@@ -13,85 +13,51 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { LangContext } from "@/Context/LangContext";
 
-function createData(id, name, calories, fat, carbs) {
-  return { id, name, calories, fat, carbs };
+function createData(id, name, details, teethCount, price, total) {
+  return { id, name, details, teethCount, price, total };
 }
 
-const rows = [
-  createData(
-    "1",
-    "Komposit Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
-    "31/32/36/37",
-    "$3500",
-    "$1.5798"
-  ),
-  createData(
-    "2",
-    "Komposit1 Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
-    "31/32/36/37",
-    "$3500",
-    "$1.5798"
-  ),
-  createData(
-    "3",
-    "Komposit2 Dolgu (Üc Yüzlü) (Kimyasal-Isikli) ×4",
-    "31/32/36/37",
-    "$3500",
-    "$1.5798"
-  ),
-];
-
-export default function Visit1() {
+export default function Visit({ dataVisits , index }) {
   const langCtx = useContext(LangContext);
+  const { id, treatments } = dataVisits;
+
+  console.log(dataVisits);
+  console.log("id", id);
+  console.log("treatments", treatments);
+  const rows = treatments.map((e, index) =>
+    createData(
+      index,
+      e.treatment_name,
+      e.details,
+      e.teeth_count,
+      e.unit[0].price,
+      e.total
+    )
+  );
 
   return (
-    <section className="visit" data-aos="fade-up"
-    data-aos-easing="linear"
-    data-aos-duration="700">
-      <Title name="Visit 1" />
-
+    <section className="visit">
+      <Title name={`Visit ${index}`} />
       <TableContainer>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="title_visit" align="left" > # Treatment </TableCell>
-              <TableCell className="title_visit" align="center">
-                Tooth{" "}
-              </TableCell>
-              <TableCell className="title_visit" align="center">
-                Unit
-              </TableCell>
-              <TableCell className="title_visit" align="center">
-                Total
-              </TableCell>
+              <TableCell className="title_visit" align="left"># Treatment</TableCell>
+              <TableCell className="title_visit" align="center">Tooth</TableCell>
+              <TableCell className="title_visit" align="center">Unit</TableCell>
+              <TableCell className="title_visit" align="center">Total</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
-              <TableRow
-                key={row.id}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
+              <TableRow key={row.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                 <TableCell component="th" scope="row">
                   <div className="sub_tooltip">
                     {row.name}
-
                     <Tooltip
                       placement="top-start"
                       arrow
-                      slotProps={{
-                        popper: {
-                          modifiers: [
-                            {
-                              name: "offset",
-                              options: {
-                                offset: [0, -4],
-                              },
-                            },
-                          ],
-                        },
-                      }}
-                      title="When you approve the treatment plan, your consultant will discuss the finalization details of your visit with you."
+                      title={row.details}
                     >
                       <Image
                         src="/images/ic.png"
@@ -102,11 +68,9 @@ export default function Visit1() {
                     </Tooltip>
                   </div>
                 </TableCell>
-                <TableCell className="sub_" align="center">
-                  {row.calories}
-                </TableCell>
-                <TableCell align="center">{row.fat}</TableCell>
-                <TableCell align="center">{row.carbs}</TableCell>
+                <TableCell className="sub_" align="center">{row.teethCount}</TableCell>
+                <TableCell align="center">{row.price}</TableCell>
+                <TableCell align="center">{row.total}</TableCell>
               </TableRow>
             ))}
           </TableBody>
