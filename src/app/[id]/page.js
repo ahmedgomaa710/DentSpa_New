@@ -13,6 +13,7 @@ import Loader from "@/components/loader/Loader";
 import { useRouter } from "next/navigation";
 import ModalError from "@/components/ModalError/ModalError";
 import { useParams } from "next/navigation"
+import { BASE_URL } from "@/lib/fetch/get";
 
 export default function OfferIdPage() {
     const params = useParams()
@@ -23,7 +24,7 @@ export default function OfferIdPage() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://staging.diagnosdent.com/api/v1/front-end/${params.id}/get-offer`);
+                const response = await fetch(`${BASE_URL}/front-end/${params.id}/get-offer`);
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -40,7 +41,7 @@ export default function OfferIdPage() {
         };
 
         fetchData();
-    }, []);
+    }, [params.id]);
 
 
 

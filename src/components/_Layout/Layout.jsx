@@ -10,6 +10,7 @@ import Ask from "../Ask/Ask";
 import useScreenWidth from "@/lib/customHooks/useScreenWidth"
 import Aos from "aos";
 import { useParams } from "next/navigation";
+import { BASE_URL } from "@/lib/fetch/get";
 
 
 
@@ -38,7 +39,7 @@ export default function Layout(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://staging.diagnosdent.com/api/v1/front-end/${params.id}/get-offer`);
+        const response = await fetch(`${BASE_URL}/front-end/${params.id}/get-offer`);
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -55,7 +56,7 @@ export default function Layout(props) {
     };
 
     fetchData();
-  }, []);
+  }, [params.id]);
 
   const offer = offerData?.data.offer
   const translations = offerData?.data.translations

@@ -44,7 +44,7 @@ const TypingAnimation = ({ text, typingSpeed, eraseSpeed }) => {
     animateText();
 
     return () => clearTimeout(timer);
-  }, [text, typingSpeed, eraseSpeed]);
+  }, [text, typingSpeed, eraseSpeed, displayText.length]);
 
   return <h2>{displayText}</h2>;
 };
