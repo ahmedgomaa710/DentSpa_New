@@ -17,7 +17,7 @@ function createData(id, name, details, teethCount, price, total) {
   return { id, name, details, teethCount, price, total };
 }
 
-export default function Visit({ dataVisits , index }) {
+export default function Visit({ dataVisits , index , langs }) {
   const langCtx = useContext(LangContext);
   const { id, treatments } = dataVisits;
 
@@ -42,10 +42,10 @@ export default function Visit({ dataVisits , index }) {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell className="title_visit" align="left"># Treatment</TableCell>
-              <TableCell className="title_visit" align="center">Tooth</TableCell>
-              <TableCell className="title_visit" align="center">Unit</TableCell>
-              <TableCell className="title_visit" align="center">Total</TableCell>
+              <TableCell className="title_visit" align="left">#  {langs[25].value} </TableCell>
+              <TableCell className="title_visit" align="center"> {langs[26].value}</TableCell>
+              <TableCell className="title_visit" align="center"> {langs[27].value}</TableCell>
+              <TableCell className="title_visit" align="center"> {langs[28].value}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

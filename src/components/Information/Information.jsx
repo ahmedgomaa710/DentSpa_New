@@ -20,13 +20,12 @@ import useScreenWidth from "@/lib/customHooks/useScreenWidth";
 import Title from "../Title/Title";
 
 
-export default function Information({ api }) {
+export default function Information({ api, langs }) {
 
-  console.log(api);
+
 
 
   const { case_id, gender, age, language, country, guest_id, x_rays, intraoral_records } = api
-
   const showRays = x_rays.map((e, index) => (
     <SwiperSlide key={index}>
       <div className={styles.sub_rays}>
@@ -51,16 +50,12 @@ export default function Information({ api }) {
   return (
     <section className={styles.information}>
       <p>
-        Here in DentSpa® we put your interests first. Our mission is to provide
-        you with the safest and highest-quality options to choose from. We take
-        your needs very seriously. Our staff are hand-selected based on strict
-        qualification criteria and are subject to constant quality control
-        through DentSpa®.
+        {langs[3].value}
       </p>
-      <Title name="Your Information" />
+      <Title name={langs[4].value} />
 
       <div className={styles.general}>
-        <h2> General </h2>
+        <h2> {langs[5].value} </h2>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2} rowSpacing={2}>
             <Grid item lg={4} xs={6}>
@@ -116,7 +111,7 @@ export default function Information({ api }) {
       </div>
 
       {x_rays.length === 0 ? null : <div className={styles.rays}>
-        <h2> X-Rays </h2>
+        <h2> {langs[6].value} </h2>
 
         <div className={styles.slider_reys}>
           <Swiper
@@ -150,7 +145,7 @@ export default function Information({ api }) {
       }
 
       {showintraoral.length === 0 ? null : <div className={styles.rays}>
-        <h2> Intraoral Records  </h2>
+        <h2>{langs[7].value}   </h2>
 
         <div className={styles.slider_reys}>
           <Swiper

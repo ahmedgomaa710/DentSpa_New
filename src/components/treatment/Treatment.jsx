@@ -4,28 +4,7 @@ import Title from "../Title/Title";
 import styles from "./Treatment.module.css";
 import Image from "next/image";
 
-export default function Treatment({ api }) {
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("https://staging.diagnosdent.com/api/v1/front-end/mMWtKc4KM/get-offer");
-
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! Status: ${response.status}`);
-  //       }
-
-  //       const result = await response.json();
-  //       console.log(result);
-  //       setData(result.data);
-  //     } catch (error) {
-  //       console.error("Error fetching data: ", error);
-  //     } 
-  //   };
-
-  //   fetchData();
-  // }, []);
+export default function Treatment({ api , langs}) {
 
 
 
@@ -41,7 +20,7 @@ export default function Treatment({ api }) {
 
   return (
     <section className={styles.treatment}>
-      <Title name="Your Treatment Plan " />
+      <Title name= {langs[24].value}  />
       <div className={styles.ov_treatment}>
         <div className={styles.main_treatment}>
           <div className={styles.num_plan}>
@@ -82,13 +61,13 @@ export default function Treatment({ api }) {
               <li> 42 </li>
               <li> 41 </li>
               <li> 31 </li>
-              <li> 18 </li>
-              <li> 18 </li>
-              <li> 18 </li>
-              <li> 18 </li>
-              <li> 18 </li>
-              <li> 18 </li>
-              <li> 18 </li>
+              <li> 32 </li>
+              <li> 33 </li>
+              <li> 34 </li>
+              <li> 35 </li>
+              <li> 36 </li>
+              <li> 37 </li>
+              <li> 38 </li>
             </ul>
           </div>
         </div>

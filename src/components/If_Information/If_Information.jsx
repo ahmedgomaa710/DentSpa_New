@@ -25,7 +25,7 @@ export default function If_Information(props) {
 
   return (
     <> 
-      {screenWidth <= 992 ? <MyLazyInformation_mob api={props.api} /> : <MyLazyInformation api={props.api} />}
+      {screenWidth <= 992 ? <MyLazyInformation_mob api={props.api}  langs={props.langs} /> : <MyLazyInformation api={props.api}   langs={props.langs}/>}
     </>
   );
 }

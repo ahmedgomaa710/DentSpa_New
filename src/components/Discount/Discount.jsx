@@ -2,17 +2,17 @@ import React from "react";
 import styles from "./Discount.module.css";
 import Image from "next/image";
 
-export default function Discount() {
+export default function Discount({langs}) {
   return (
     <div className={styles.discount}>
       <div className={styles.benner_discount}>
         <h2>
-          you can get a<span> 5% discount</span> by making a deposit payment.
+        {langs[39].value}
         </h2>
       </div>
 
       <div className={styles.main_discount}>
-        <h2>Please select the amount of the down payment that you would like to pay.</h2>
+        <h2>{langs[40].value}</h2>
         <ul>
           <li> <button> 5% </button></li>
           <li> <button> 10% </button></li>

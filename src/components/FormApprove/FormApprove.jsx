@@ -5,21 +5,20 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 
-function FormDecline({ api }) {
-console.log("FormDecline" , api);
-  // const showdecline_reasons = api.map((e, index) => (
-  //   <li className={styles.sub_check_decline} key={index}>
-  //     <input type="checkbox" name="decline" hidden id={`decline-${e.id}`} />
-  //     <label htmlFor={`decline-${e.id}`}> {e.reason_text}</label>
-  //   </li>
-  // ))
+function FormDecline({ api ,langs }) {
+  const showdecline_reasons = api.map((e, index) => (
+    <li className={styles.sub_check_decline} key={index}>
+      <input type="checkbox" name="decline" hidden id={`decline-${e.decline_reason_id}`} />
+      <label htmlFor={`decline-${e.decline_reason_id}`}> {e.reason_text}</label>
+    </li>
+  ))
   return (
     <div className={styles.form_decline}>
       <form>
-        <h2> The reason of Decline </h2>
+        <h2> {langs[36].value} </h2>
         <div className={styles.check_decline}>
           <ul>
-            {/* {showdecline_reasons} */}
+            {showdecline_reasons}
           </ul>
 
 
@@ -27,7 +26,7 @@ console.log("FormDecline" , api);
         </div>
         <textarea className="ctm-input" ></textarea>
         <div className={styles.main_btn_dene}>
-          <button className={styles.btn_dene}> Submit </button>
+          <button className={styles.btn_dene}>  {langs[38].value} </button>
 
         </div>
       </form>
@@ -35,7 +34,36 @@ console.log("FormDecline" , api);
   );
 }
 
-export default function FormApprove() {
+export default function FormApprove({ api , langs }) {
+  const handleApprove = async (e) => {
+    e.preventDefault();
+
+    try {
+      var formdata = new FormData();
+      formdata.append("patient_name", "Ibrahim Hasan");
+
+      var requestOptions = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
+      };
+
+      const res = await fetch("http://127.0.0.1:8000/api/v1/front-end/mMWtKc4KM/approve-offer", requestOptions)
+
+      if (!res.ok) {
+        console.log(await res.json());
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+
+      const result = await res.json();
+      console.log(result);
+      setData(result);
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    }
+  }
+
+
   const [hendleDecline, setHendleDecline] = useState(false)
   return (
     <section className={styles.form_approve}>
@@ -44,7 +72,7 @@ export default function FormApprove() {
           <Grid container alignItems="center" spacing={2} rowSpacing={2}>
             <Grid item lg={5} xs={12}>
               <div className={styles.btn_approve}>
-                <button className="ctm-btn"> Approve </button>
+                <button className="ctm-btn" onClick={(e) => handleApprove(e)} type="input">  {langs[32].value}  </button>
                 <a href="" className="ctm-btn2">
                   <Image
                     src={"/images/download.png"}
@@ -53,15 +81,15 @@ export default function FormApprove() {
                     height={20}
                   />
                   <div>
-                    <h3> Download </h3>
-                    <span> the treatment plan </span>
+                    <h3> {langs[34].value} </h3>
+                    <span>{langs[35].value} </span>
                   </div>
                 </a>
               </div>
               <div className={styles.btn_decline}>
                 <button type="button" onClick={() => setHendleDecline(true)}>
-                  <Image src={"/images/x.png"} alt="" width={13} height={13} />I
-                  want to decline the treatment plan
+                  <Image src={"/images/x.png"} alt="" width={13} height={13} />
+                  {langs[33].value}
                 </button>
               </div>
             </Grid>
@@ -75,8 +103,7 @@ export default function FormApprove() {
                 />
                 <p>
                   <i>
-                    When you approve the treatment plan, your consultant will
-                    discuss the finalization details of your visit with you.
+                  {langs[37].value}
                   </i>
                 </p>
               </div>
@@ -84,7 +111,7 @@ export default function FormApprove() {
           </Grid>
         </Box>
       </form>
-      {hendleDecline ? <FormDecline /> : null}
+      {hendleDecline ? <FormDecline api={api} langs={langs}/> : null}
 
     </section>
   );

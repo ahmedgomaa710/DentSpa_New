@@ -8,11 +8,13 @@ import Videos from "@/components/Videos/Videos";
 import Images from "@/components/Images_after/Images";
 import Package from "@/components/Package_Includes/Package";
 import If_Information from "@/components/If_Information/If_Information";
-import offerLoader from "@/lib/loader/offerLoader"
 import { useEffect, useState } from "react";
+import Loader from "@/components/loader/Loader";
 export default function Home() {
   const [offerData, setData] = useState(null);
-  console.log(offerData);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,37 +25,52 @@ export default function Home() {
         }
 
         const result = await response.json();
-        console.log(result);
+        setLoading(false)
         setData(result);
+
       } catch (error) {
         console.error("Error fetching data: ", error);
+        setError(true)
       }
     };
 
     fetchData();
   }, []);
 
-  const diagnosis = offerData?.data.diagnosis
-  const treatment_plan = offerData?.data.treatment_plan.treatment_plan
-  const visits = offerData?.data.treatment_plan.visits
-  const decline_reasons = offerData?.data.decline_reasons
-  console.log("decline_reasons" , decline_reasons);
+
+
+  if (loading) {
+    return <Loader />
+  }
+
+  if (error) {
+    return (<p> error </p>)
+  }
+
+  const diagnosis = offerData.data.diagnosis
+  const treatment_plan = offerData.data.treatment_plan.treatment_plan
+  const visits = offerData.data.treatment_plan.visits
+  const decline_reasons = offerData.data.decline_reasons
+  const videos = offerData.data.videos
+  const status = offerData.data.offer.status
+  const translations = offerData.data.translations
+  console.log(translations);
   return (
     <div className="home">
 
-      {diagnosis && <If_Information api={diagnosis} />}
-      {diagnosis && <Medical api={diagnosis} />}
-      {treatment_plan && <Treatment api={treatment_plan} />}
-      {visits && visits.map((e, index) => (
-        <Visit key={index} index={index + 1} dataVisits={e} />
+      <If_Information api={diagnosis} langs={translations} />
+      <Medical api={diagnosis} langs={translations} />
+      <Treatment api={treatment_plan}  langs={translations}  />
+      {visits.map((e, index) => (
+        <Visit key={index} index={index + 1} dataVisits={e}   langs={translations} />
       ))}
 
-      {decline_reasons && <FormApprove api={decline_reasons} />}
-
-      <Discount />
-      <Videos />
+      {/* {status === "pending" ? <FormApprove api={decline_reasons} /> : null} */}
+      <FormApprove api={decline_reasons}   langs={translations} />
+      <Discount langs={translations} />
+      <Videos api={videos}  langs={translations} />
       <Images />
-      <Package />
+      <Package  langs={translations} />
     </div>
   );
 }

@@ -72,6 +72,7 @@
   border: 1px solid var(--color-border);
   padding: 15px 20px;
   color: #392b6b;
+  min-height: 50px;
   font-size: 14px;
   border-radius: 3px;
 }
