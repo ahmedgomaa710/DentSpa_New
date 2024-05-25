@@ -69,7 +69,7 @@ export default function Information({ api, langs }) {
             <Grid item lg={4} xs={6}>
               <div className={styles.sub_general}>
                 <div className={styles.img_general}>
-                  <Image src="/images/1.svg" alt="img" width={30} height={30} />
+                  <Image src="/images/2.svg" alt="img" width={30} height={30} />
                 </div>
                 <h2>{gender} </h2>
               </div>
@@ -77,7 +77,7 @@ export default function Information({ api, langs }) {
             <Grid item lg={4} xs={6}>
               <div className={styles.sub_general}>
                 <div className={styles.img_general}>
-                  <Image src="/images/1.svg" alt="img" width={30} height={30} />
+                  <Image src="/images/3.svg" alt="img" width={30} height={30} />
                 </div>
                 <h2> {age} </h2>
               </div>
@@ -85,7 +85,7 @@ export default function Information({ api, langs }) {
             <Grid item lg={4} xs={6}>
               <div className={styles.sub_general}>
                 <div className={styles.img_general}>
-                  <Image src="/images/1.svg" alt="img" width={30} height={30} />
+                  <Image src="/images/4.svg" alt="img" width={30} height={30} />
                 </div>
                 <h2> {language} </h2>
               </div>
@@ -93,7 +93,7 @@ export default function Information({ api, langs }) {
             <Grid item lg={4} xs={6}>
               <div className={styles.sub_general}>
                 <div className={styles.img_general}>
-                  <Image src="/images/1.svg" alt="img" width={30} height={30} />
+                  <Image src="/images/5.svg" alt="img" width={30} height={30} />
                 </div>
                 <h2> {country}</h2>
               </div>
@@ -101,7 +101,7 @@ export default function Information({ api, langs }) {
             <Grid item lg={4} xs={6}>
               <div className={styles.sub_general}>
                 <div className={styles.img_general}>
-                  <Image src="/images/1.svg" alt="img" width={30} height={30} />
+                  <Image src="/images/6.svg" alt="img" width={30} height={30} />
                 </div>
                 <h2>{guest_id} </h2>
               </div>

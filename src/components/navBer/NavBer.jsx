@@ -3,19 +3,19 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import styles from "./navber.module.css";
 import { LangContext, LangContextSet } from "@/Context/LangContext";
-export default function NavBer() {
+export default function NavBer({langs}) {
   const langCtx = useContext(LangContext);
   const langSetLang = useContext(LangContextSet);
 
-  const handleChangLangContext = () => {
-    if (langCtx === "ar") {
-      langSetLang("en");
-      localStorage.setItem("lang", "en");
-    } else if (langCtx === "en") {
-      langSetLang("ar");
-      localStorage.setItem("lang", "ar");
-    }
-  };
+  // const handleChangLangContext = () => {
+  //   if (langCtx === "ar") {
+  //     langSetLang("en");
+  //     localStorage.setItem("lang", "en");
+  //   } else if (langCtx === "en") {
+  //     langSetLang("ar");
+  //     localStorage.setItem("lang", "ar");
+  //   }
+  // };
 
   return (
     <div className={styles.top_ber}>
@@ -26,14 +26,14 @@ export default function NavBer() {
         <div className={styles.btn_support}>
           <a href="" target="_blank">
             <Image src="/images/img_button.svg" alt="btn_support" width={25} height={25} />
-            Get support
+            {langs[0].value}
           </a>
 
           <div className={styles.btn_top_ber}>
-            <button onClick={handleChangLangContext}>
+            {/* <button onClick={handleChangLangContext}>
               <i className="bi bi-globe2"></i>
               <span>{langCtx}</span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

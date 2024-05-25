@@ -6,7 +6,7 @@ import styles from "./hero.module.css";
 
 const TypingAnimation = ({ text, typingSpeed, eraseSpeed }) => {
   const [displayText, setDisplayText] = useState('');
-  
+
   useEffect(() => {
     let currentIndex = 0;
     let isErasing = false;
@@ -49,16 +49,17 @@ const TypingAnimation = ({ text, typingSpeed, eraseSpeed }) => {
   return <h2>{displayText}</h2>;
 };
 
-export default function Hero() {
+export default function Hero({ api }) {
+  console.log(api);
   return (
     <section className={styles.hero}>
       <div className={styles.img_hero}>
         <Image src="/images/img.png" alt="img hero" width={400} height={400} />
       </div>
-      <div className={styles.text_hero}> 
-      
-      <TypingAnimation  text="Dental Diagnostic Report" typingSpeed={150} eraseSpeed={1500}/>
-          <p> <span> Prepared For Mr.</span>  Ned Stark </p>
+      <div className={styles.text_hero}>
+
+        <TypingAnimation text={api.translations[1].value} typingSpeed={150} eraseSpeed={1500} />
+        <p> <span>{api.translations[2].value}</span>:  {api.offer.patient_name} </p>
       </div>
     </section>
   );

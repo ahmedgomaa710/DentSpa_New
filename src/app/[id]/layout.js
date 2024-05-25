@@ -1,7 +1,7 @@
 
 
 import LangContextProvider from "@/Context/LangContext";
-import "./globals.css";
+import "../globals.css";
 import Layout from "@/components/_Layout/Layout";
 
 export const metadata = {
